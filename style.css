@@ -72,3 +72,16 @@ body{
 #bold-button:hover{
     background-color: #383838;
 }
+
+#title{
+    font-size: 32px;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#quote{
+    display: flex;
+    flex-direction: column;
+}
