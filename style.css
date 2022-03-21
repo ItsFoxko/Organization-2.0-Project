@@ -10,7 +10,7 @@ font-family: 'League Gothic', sans-serif;
 
 :root{
     --blue-dark: #080c24;
-    --grey-dark: #151e34;
+    --grey-dark: #151e34; 
     --main-blue: #3071e8;
     --main-white: #fff;
     --main-orange: #db8b24;
@@ -22,6 +22,10 @@ font-family: 'League Gothic', sans-serif;
 *{
     margin: 0;
     padding: 0;
+}
+
+body{
+    background-color: var(--blue-dark);
 }
 
 .container{
@@ -49,6 +53,7 @@ nav{
     top: 0;
     font-family: var(--secundary-font);
     font-size: 20px;
+    z-index: 1;
 }
 
 .top-nav{
@@ -60,6 +65,9 @@ nav{
 
 #nav-content a{
     padding: 0 20px;
+}
+#nav-content a:hover{
+    color: var(--main-orange);
 }
 
 nav a{
@@ -76,7 +84,7 @@ nav a{
     background-image: url(./img/art2.jpg);
     background-position: center;
     background-size: cover;
-    filter: grayscale(80%);
+    filter: grayscale(60%);
     transition-duration: 1s;
     display: flex;
     justify-content: center;
@@ -88,6 +96,8 @@ nav a{
     font-family: var(--secundary-font);
     text-shadow: 5px 5px 5px var(--grey-dark);
     padding: 1.5rem 0;
+    display: flex;
+    user-select: none;
 }
 
 #cover:hover{
@@ -101,5 +111,72 @@ nav a{
 
 #cover-buttons{
     display: flex;
-    justify-content: center;
+    width: 100%;
+}
+
+.cover-button-one, .cover-button-two{
+    font-family: var(--secundary-font);
+    color: var(--main-white);
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: solid 2px var(--main-white);
+    border-radius: 50PX;
+    width: 100%;
+    transition-duration: 0.2s;
+}
+.cover-button-one:active, .cover-button-two:active{
+    transform: scale(0.9);
+}
+
+.cover-button-one{
+    color: var(--blue-dark);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.cover-button-one:hover{
+    color: var(--main-white);
+    background-color: var(--main-blue);
+}
+
+.cover-button-two{
+    color: var(--main-white);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.cover-button-two:hover{
+    color: var(--blue-dark);
+    background-color: var(--main-orange);
+}
+
+main{
+    color: var(--main-white);
+    font-family: var(--main-font)
+}
+
+#body-title{
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    margin-top: 1rem;
+}
+
+hr{
+    width: 50%;
+}
+
+#gallery{
+    margin-top: 3rem;
+    width: 90%;
+    margin-right:auto ;
+    margin-left: auto;
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: 90px 90px 90px;
+    grid-template-rows: 150px 150px 150px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.card img{
+    height: ;
 }
